@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Jillhub</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+</head>
+
+<body class="Background">
+
+    <!-- Navbar -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Sideshow">Sideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a href="#Contact">Contact</a>
+    </div>
+
+    <br><br>
+
+    <!-- Background Video -->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="./Img/video/cat_typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Video Text -->
+    <div class="Video_Text">
+        <h1 class="blue-text">Jill's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>When you program, you have to think in a way that most people never do. You’re creating something from nothing.
+                    <br>It’s like being a writer, a designer, and an architect all at once.
+                    <br>Except what you build can come alive.</q>
+                <br><span class="quote-author">- Paul Graham</span>
+                <br><br>
+                My name is Jill. Welcome to my portfolio website.
+                <br><br>
+                Thanks for stopping by! And I hope you enjoy exploring with me.
+            </p>
+        </strong>
+    </div>
+
+    <!-- Sideshow Section -->
+    <div class="Row" id="Sideshow">
+        <h1>Sideshow</h1>
+        <div class="About_Slideshow_Wrapper">
+            <div id="About_Slideshow_Container">
+                <!-- Slide 1 -->
+                <div class="aboutSlides fade">
+                    <img class="About_Slideshow_Image" src="Img/American_shorthair.jpeg" alt="">
+                    <div class="caption">My little coding assistant </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="aboutSlides fade">
+                    <img class="About_Slideshow_Image" src="Img/British_shorthair.jpeg" alt="">
+                    <div class="caption">Break time means a snack and a stretch</div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="aboutSlides fade">
+                    <img class="About_Slideshow_Image" src="Img/burmese.jpeg" alt="">
+                    <div class="caption">The silent supervisor ensures no bug escapes</div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="aboutSlides fade">
+                    <img class="About_Slideshow_Image" src="Img/Khao_Manee.jpeg" alt="">
+                    <div class="caption">Always watching… and judging</div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="aboutSlides fade">
+                    <img class="About_Slideshow_Image" src="Img/Maine_Coon.jpeg" alt="">
+                    <div class="caption">A fluffy companion makes coding feel lighter</div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="aboutSlides fade">
+                    <img class="About_Slideshow_Image" src="Img/Siamese_cat.jpeg" alt="">
+                    <div class="caption">Every coding session starts with a curious gaze</div>
+                </div>
+
+                <!-- Arrows -->
+                <a class="About_Previous" onclick="plusAboutSlides(-1)">&#10094;</a>
+                <a class="About_Next" onclick="plusAboutSlides(1)">&#10095;</a>
+            </div>
+
+            <!-- Paw Dots -->
+            <div class="aboutDots">
+                <span class="aboutDot" onclick="currentAboutSlide(1)"></span>
+                <span class="aboutDot" onclick="currentAboutSlide(2)"></span>
+                <span class="aboutDot" onclick="currentAboutSlide(3)"></span>
+                <span class="aboutDot" onclick="currentAboutSlide(4)"></span>
+                <span class="aboutDot" onclick="currentAboutSlide(5)"></span>
+                <span class="aboutDot" onclick="currentAboutSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <img src="./Img/cat_coding.jpg" alt="own image and description">
+        </div>
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                I’m just getting started with coding, and it’s been a really fun learning journey. One idea I’m excited about is building a cat themed website, full of fun facts, cute photos, and maybe even interactive features.
+                <br><br>
+                I’m currently studying for a Diploma in Software Development, where I learned HTML, CSS, JavaScript, SQL, C#, and more. While I still have a lot to learn, I’m proud of my progress and excited to grow.
+                <br><br>
+                Thank you for visiting! Feel free to send me a<a href="#" id="contactLink"> message</a>!
+            </p>
+        </div>
+    </div>
+
+    <!-- GitHub Section -->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p class="center">Explore my coding projects on my GitHub profile here:</p>
+            <p class="center"><a href="https://github.com/jilllam" target="_blank">Jill‘s Github</a></p>
+        </div>
+        <div class="Column_2">
+            <a href="https://github.com/jilllam" target="_blank"><img src="./Img/logo.png" alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="Row" id="Contact">
+        <div class="Column_2 Column_tall">
+            <img src="./Img/contact.svg" alt="Contact_Image">
+        </div>
+        <div class="Column_1 Column_tall">
+            <h1>Sign up for Secret Cat Coding</h1>
+            <p>Leave your details to join the Secret Cat Coding Experience!!</p>
+            <form id="contactForm">
+                <label>Name:</label>
+                <input type="text" id="Name" placeholder="Please enter your name here" required>
+                <label>Email:</label>
+                <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
+                <label>Message:</label>
+                <input type="text" id="Message" name="Message" placeholder="What is your favorite cat" required>
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Contact Form  -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="modalContactForm">
+                <label>Name:</label>
+                <input type="text" placeholder="Please enter your name here" required>
+                <label>Email:</label>
+                <input type="text" name="Email" placeholder="Please enter your email here" required>
+                <label>Message:</label>
+                <input type="text" name="Message" placeholder="Please write your message here" required>
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="center">&copy;2025 Jill Inc.&reg;, <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+    </footer>
+
+    <!-- JS -->
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
